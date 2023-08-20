@@ -1,0 +1,262 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* header */
+
+
+* {box-sizing: border-box;}
+
+header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  box-shadow: 0 0 5px black;
+  position: fixed;
+  width: 100%;
+}
+
+#deletion_confirmation, #undelete{
+  display: none;
+} 
+
+
+#search_input{
+  border: 1px solid black;
+  margin: 0 5px 0 5px;
+  float: left;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 5px;
+}
+
+
+.link{
+  border: none;
+  margin: 0 5px 0 5px;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #537188;
+}
+
+.link:hover {
+  background-color: #779ebb;
+}
+
+#user_name {
+  padding: 15px 0 0 10px;
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#links{
+  margin-top: 10px;
+  float: right;
+}
+
+#message_delete{
+  display: none;
+}
+
+/* header */
+
+
+.note {
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  cursor: pointer;
+  box-shadow: 2px -2px rgb(79, 79, 79);
+  display: flex;
+  flex-direction: column;
+}
+
+.note-date {
+  margin-top: auto;
+  text-align: right;
+}
+
+
+#add_new_note{
+  margin-top: 15px;
+}
+
+#popup, #remove_all {
+  display: none;
+  position: fixed;
+  top: 50%;
+  padding: 7px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(78, 78, 78);
+}
+
+#close-popup-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+#title_note,
+#text_note,
+#options {
+  width: 85%;
+  padding: 10px;
+  padding-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #537188;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #779ebb;
+}
+
+#deletion_confirmation{
+  display: none;
+}
+#undelete{
+  display: none;
+}
+
+#close-popup-btn{
+  color: black;
+  cursor: pointer;
+}
+
+.check_note{
+  display: none;
+}
+
+#notes{
+  padding-top: 100px;
+}
+
+
+
+input[type="date"] {
+  margin: 50px 0 10x 0;
+  appearance: none;
+  background-color: white;
+  border: 2px solid #ccc;
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+}
+
+input[type="date"]:hover {
+  border-color: #666;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+input[type="date"]:focus {
+  border-color: #4285f4;
+  box-shadow: 0px 3px 6px rgba(66, 133, 244, 0.3);
+}
+
+
+#toInput{
+  display: none;
+}
+
+
+
+#notes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#notes > div {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+#message_delete{
+  display: none;
+  margin-left: 1150px;
+  margin-top: 100px;
+  padding: 7px;
+  border-radius: 5px;
+  position: fixed;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px black;
+}
+
+@media (max-width: 768px) {
+  #notes > div {
+    width: 80%;
+    margin: 10px 0;
+  }
+  #notes{
+    flex-direction: column;
+    align-items: center;
+    padding-top: 170px;
+  }
+  button {
+    display: block;
+    text-align: left;
+  }
+  #search_input{
+    display: none;
+  }
+  
+  #links {
+    float: left;
+  }
+  #user_name{
+    float: none;
+  }
+}
